@@ -1,5 +1,5 @@
   # apache configuration playbook.
-tasks: 
+  - tasks: 
    - name: "installing httpd"      
      yum:       
        name: "httpd" 
