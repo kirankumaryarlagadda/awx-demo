@@ -1,5 +1,5 @@
   # apache configuration playbook.
-- hosts: "ec2-3-17-29-162.us-east-2.compute.amazonaws.com"
+- hosts: "ip-172-31-33-204.us-east-2.compute.internal"
   tasks: 
    - name: "installing httpd"      
      yum:       
