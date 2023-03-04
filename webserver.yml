@@ -1,5 +1,5 @@
   # apache configuration playbook.
-- hosts: all
+- hosts: '3.17.29.162'
 - tasks: 
    - name: "installing httpd"      
      yum:       
