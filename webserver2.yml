@@ -1,0 +1,26 @@
+  # apache configuration playbook.
+- hosts: all
+  tasks: 
+    - name: Install httpd package
+      yum:
+        name: httpd
+        state: latest
+    
+    - name: Start and enable httpd service
+      service:
+        name: httpd
+        enabled: true
+        state: started
+        
+    - name: Create a custom index.html file
+      copy:
+        dest: /var/www/html/index.html
+        content: |
+          <html>
+          <h1>
+          Hello world!
+          </h1>
+          <h2>
+          Welcome to pagez DEMO WEB2.
+          </h2>
+          </html>
