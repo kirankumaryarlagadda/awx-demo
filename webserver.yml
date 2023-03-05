@@ -1,15 +1,20 @@
   # apache configuration playbook.
 - hosts: 'ec2-3-17-29-162.us-east-2.compute.amazonaws.com'
   tasks: 
-   - name: "installing httpd"      
-     yum:       
-       name: "httpd" 
-       state: present           
-   - name: "copying content to /var/www/html/"     
-     copy:        
-        content: "Hello Ansible Tower"       
-        dest: "/var/www/html/ansible-tower.html"           
-   - name: "starting nginx server"      
-     service:         
-        name: "httpd"        
-        state: restarted
+    - name: Install httpd package
+      dnf:
+        name: httpd
+        state: latest
+    
+    - name: Start and enable httpd service
+      service:
+        name: httpd
+        enabled: true
+        state: started
+    - name: Create a custom index.html file
+      copy:
+        dest: /var/www/html/index.html
+        content: |
+          Enable SysAdmin Demo:
+          Ansible Profiling with Callback Plugin
+          Custom Web Page
