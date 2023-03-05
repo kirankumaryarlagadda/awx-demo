@@ -19,8 +19,11 @@
           <html>
           <h1>
           Hello world!
-          Welcome to pagez DEMO WEB1.
-          
-          <img src="img_girl.jpg" alt="Girl in a jacket">
           </h1>
+          <h2>
+          Welcome to pagez DEMO WEB1.
+          </h2>
+          <h3>
+          <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+          </h3>
           </html>
